@@ -248,8 +248,138 @@ footer {
     }
 }
 
-@media screen and (max-width: 768px) {
-    .background-holder {
-        background-attachment: scroll; /* 或者移除這個屬性，因為 'scroll' 是預設行為 */
-    }
+
+@media screen and (max-width: 375px) {
+
+/* 3 */
+.s3-top {
+    width: 110px;
+}
+
+.section-top {
+    padding-top: 30px;
+    font-size: 18px;
+    padding-bottom: 10px;
+}
+
+.sub-section {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 10px;
+}
+
+.s3-text {
+    padding-left: 10px;
+    text-align:left;
+    font-size: 14px;
+}
+
+.s3-text h3, .s3-4-text h3 {
+    color: #ff9b28;
+    text-align: center;
+    font-size: 16px;
+}
+
+/* 3-1 */
+.img3-1 {
+    width: 120px;
+    border-radius: 10%;
+}
+
+/* 3-2 */
+.img3-2 {
+    width: 160px;
+    height: 150px;
+    border-radius: 10%;
+}
+
+/* 3-3 */
+.img3-3 {
+    width: 120px;
+    border-radius: 10%;
+}
+
+/* 3-4 */
+#s3-4 {
+    height: 200px;
+    background-image: url('../images/3-4.gif');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.s3-4-text {
+    flex: 1;
+}
+
+.s3-4-text h3 {
+    margin-bottom: 100px;
+  }
+
+/* 3-5 */
+.img3-5 {
+    width: 140px;
+    border-radius: 10%;
+    padding-left: 10px;
+    padding-bottom: 20px;
+}
+
+#section4 h2 {
+    font-size: 20px;
+    color: #ff9b28;
+    margin-top: 200px;
+    margin-bottom: 180px;
+}
+
+#section4 p {
+    font-size: 14px;
+    text-align: left;
+    padding: 30px;
+}
+
+#section5 {
+    height: 300px;
+    background-size: cover;
+    background-image: url('../images/5.webp');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-position-y:top ;
+}
+
+.img5-1 {
+    width: 180px;
+    margin-left: 150px;
+}
+
+
+#section6 {
+    height: 350px;
+    background-size: cover;
+    background-image: url('../images/6.jpeg');
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.img6-1 {
+    width: 350px;
+    margin-top:  220px;
+}
+
+#section7 {
+    height: 150px;
+    background-size: 400px;
+    background-image: url('../images/7.jpg');
+    background-position: center;
+    background-position-y: top;
+    background-repeat: no-repeat;
+    padding-bottom: 200px;
+}
+
+.go {
+    width: 100px;
+    margin-left: 100px;
+    margin-top: 260px;
+}
+
 }

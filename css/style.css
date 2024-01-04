@@ -19,9 +19,9 @@ body::before {
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url('../images/3.png');
+    background-image: url('../images/bbg.png');
     background-position: center center;
-    background-size: cover;
+    background-size: 600px;
     opacity: 0.2; /* 設置透明度 */
     z-index: -1; /* 確保背景在內容之下 */
 }
@@ -29,6 +29,7 @@ body::before {
 header, .content-section, footer {
     text-align: center;
     color: white;
+    flex-flow: column;
 }
 
 header {
@@ -45,10 +46,6 @@ header {
     height: auto;
     display: block;
     margin: 0 auto;
-}
-
-.show {
-    opacity: 1 !important; /* 確保這個樣式覆蓋其他的 opacity 設置 */
 }
 
 section {
@@ -69,12 +66,17 @@ section {
     background-position: center;
 }
 
+/* 2 */
+
 #section2 {
     height: 250px;
     background-image: url('../images/2.jpg');
     background-position: center;
     background-size: cover;
-    background-repeat: no-repeat;}
+    background-repeat: no-repeat;
+    transition: transform 0.3s ease-out; /* 平滑轉換效果 */
+    transform-origin: center center;
+}
 
 body #section2 h2 {
     width: 200px;
@@ -84,51 +86,146 @@ body #section2 h2 {
     margin-top: 10px;
 }
 
-#section3 {
-    position: relative;
-    height: 500px;
-}
 
+/* 3 */
 .s3-top {
     width: 110px;
 }
 
-.background-holder {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-
-    background-position: center;
-    background-size: cover; /* 'cover' 會保證圖片覆蓋整個元素 */
-    z-index: -1; /* 確保背景在內容之下 */
-}
-
 .section-top {
-    padding-top: 50px;
+    padding-top: 30px;
     font-size: 20px;
+    padding-bottom: 30px;
 }
 
 .sub-section {
-    opacity: 1;
-    transition: opacity 2s ease-in-out;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 20px;
 }
 
-.fade-in-section {
-    animation: fadeIn 2s ease-in-out forwards;
+.s3-text {
+    padding-left: 20px;
+    text-align:left;
 }
 
-@keyframes fadeIn {
-    to {
-        opacity: 1;
-    }
+.s3-text h3, .s3-4-text h3 {
+    color: #ff9b28;
+    text-align: center;
 }
 
-.sub-section {
-    opacity: 0;
-    transition: opacity 2s ease-in-out;
+/* 3-1 */
+.img3-1 {
+    width: 240px;
+    border-radius: 10%;
 }
+
+/* 3-2 */
+.img3-2 {
+    width: 270px;
+    height: 210px;
+    border-radius: 10%;
+}
+
+/* 3-3 */
+.img3-3 {
+    width: 240px;
+    border-radius: 10%;
+}
+
+/* 3-4 */
+#s3-4 {
+    height: 290px;
+    background-image: url('../images/3-4.gif');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.s3-4-text {
+    flex: 1;
+}
+
+.s3-4-text h3 {
+    margin-bottom: 150px;
+  }
+
+/* 3-5 */
+.img3-5 {
+    width: 200px;
+    border-radius: 10%;
+    padding-left: 20px;
+    padding-bottom: 30px;
+}
+
+/* 4 */
+#section4 {
+    height: 300px;
+    background-size: 600px;
+    background-image: url('../images/4.gif');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-position-y:top ;
+    padding-bottom: 200px;
+}
+
+#section4 h2 {
+    font-size: 20px;
+    color: #ff9b28;
+    margin-top: 200px;
+    margin-bottom: 180px;
+}
+
+#section4 p {
+    font-size: 16px;
+    text-align: left;
+    padding: 30px;
+}
+
+#section5 {
+    height: 300px;
+    background-size: cover;
+    background-image: url('../images/5.webp');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-position-y:top ;
+}
+
+.img5-1 {
+    width: 220px;
+    margin-left: 250px;
+}
+
+
+#section6 {
+    height: 350px;
+    background-size: cover;
+    background-image: url('../images/6.jpeg');
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.img6-1 {
+    width: 440px;
+    margin-top:  220px;
+}
+
+#section7 {
+    height: 300px;
+    background-size: cover;
+    background-image: url('../images/7.jpg');
+    background-position: center;
+    background-position-y: bottom;
+    padding-bottom: 200px;
+}
+
+.go {
+    width: 190px;
+    margin-left: 200px;
+    margin-top: 380px;
+}
+
 
 footer {
     background-image: url(../images/footer.png);
@@ -142,6 +239,13 @@ footer {
     left: 0; /* 距離頁面左側 0px */
     width: 100%; /* footer 寬度為 100% */
     z-index: 1000; /* 確保 footer 在最上層 */
+}
+
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
 }
 
 @media screen and (max-width: 768px) {

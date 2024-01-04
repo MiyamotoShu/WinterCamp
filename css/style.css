@@ -1,467 +1,110 @@
-/* 版面設定 */
-
-* {
+body, html {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-    text-decoration: none;
-    transition: 0.4s all linear;
-    font-size: 22px;
+    background-color: #000; /* 全黑背景 */
 }
 
-@font-face {
-    font-family: 'Play', sans-serif;
-    font-family: 'Black Ops One', cursive;
+body {
+    padding-bottom: 60px;
 }
 
+header, .content-section, footer {
+    text-align: center;
+    color: white;
+}
 
-/* header */
-
-header{
+header {
+    height: 120px;
+    padding-right: 40px;
     position: fixed;
-    top: 0; left: 0; right: 0;
-    background: black;
-    display: flex;
-    justify-content: center; /* 水平置中 */
-    align-items: center;     /* 垂直置中 */
-    height: 100px;
+    width: 100%; /* header 寬度為 100% */
+    z-index: 1000; /* 確保 header 在最上層 */
+    background-color: rgb(0, 0, 0,0.9);
 }
 
-.logoword{
-    width: 250px; height: 100px;
-    animation: movelogo 2s linear 0s infinite;
-}
-@keyframes movelogo{
-    49%{
-        transform: translateX(0);
-    }
-    50% {
-        transform: translate(-10px,-1px);
-    }
-    50.5% {
-        transform: translate(-10px,1px);
-    }
-    51% {
-        transform: translate(10px,1px);
-    }
-    51.5% {
-        transform: translate(10px,-1px);
-    }
-    52%{
-        transform: translateX(0);
-      }
-  }
-
-/* home */
-
-section{
-    padding: 10px;
-}
-
-
-.home{
-    display: flex;
-    flex-wrap: wrap;
-    min-height: 700px;
-    align-items: center;
-    background-image:url(../images/first.gif);
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-}
-
-.home .content{
-    width: 800px;
-    margin-top: 60px;
-    margin-left: 5%;
-    padding: 50px; 
-    background: rgba(0,0,0,0.2);
-}
-
-.home .content h3{
-  font-size: 30px;
-  font-family: Black Ops One;
-  margin: auto;
-  font-weight: bold;
-  background: -webkit-linear-gradient( 270deg, #fcfdff 0%, #f2b1b1 80%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  color: #978170;
-}
-.home .content h4{
-    font-size: 30px;
-    font-family: Black Ops One;
-    margin: auto;
-    font-weight: bold;
-    background: -webkit-linear-gradient( 135deg, #FFE985 10%, #FFC600 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    color: #978170;
-}
-
-.home .content p{
-    font-size: 20px;
-    font-family: Play;
-    color: white;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    margin-bottom: 20px;
-}
-
-/* other */
-.introduce
-{
+.header-image {
+    width: 300px;
+    height: auto;
+    display: block;
     margin: 0 auto;
-    height: 800px;
-    padding: 40px;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-position: center center;
-    background-size: cover;
-}
-/* about game */
-.category {
-    background-image:linear-gradient(to bottom,rgba(0,0,0,0.3),rgba(0,0,0,0.5)),url(..//images/3.jpeg);
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    min-height: 1000px;
-    align-items: center;
-}
-.category .content{
-=    font-family: Play;
-    margin: auto;
-    width: 800px;
-    margin-top: 4%;
-    margin-right: 5%;
-    padding: 50px; 
-    background: rgb(23,126,152);
-    background: linear-gradient(90deg, rgba(23,126,152,0) 0%,rgba(23,126,152,0.3) 10%, rgba(9,99,121,0.4) 37%, rgba(192,9,199,0.4) 60%, rgba(0,212,255,0.2) 94%, rgba(0,212,255,0) 100%);
 }
 
-.category .content h3
-{
-    font-weight: bold;
-    font-size: 30px;
-    word-wrap: break-word;
-    margin: auto;
-    margin-bottom: 2%;
-    font-family: Black Ops One;
-    text-align: center;
-    background: -webkit-linear-gradient( 150deg,#FA742B 20%, #FFE985 50%, #FA742B 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    color: #978170;
+.show {
+    opacity: 1 !important; /* 確保這個樣式覆蓋其他的 opacity 設置 */
 }
 
-.category .content h4{
-    padding: 20px;
-    display: flex; /* 新增 Flexbox 佈局 */
-    align-items: center; /* 垂直置中子元素 */
-}
-
-.category .content p
-{
-    padding-top: 2%;
-    font-size: 20px;
-    color: #ffe69d;
-    word-wrap: break-word;
-    margin: auto;
-    font-family:Play;
-}
-
-.images1
-{
-    width: 200px;
-    padding: 10px;
-}
-
-/* whitepaper */
-.whitepaper {
-    background-image:linear-gradient(to left,rgba(0,0,0,0.5),rgba(0,0,0,0.8)),url(../images/cyber_water.png);
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    min-height: 600px;
-    align-items: center;
-}
-.whitepaper .content{
-    font-size: 20px;
-    font-family: Play;
-    width: 800px;
-    margin: auto;
-    margin-top: 3%;
-    margin-left: 5%;
-    padding: 50px;
-    background: rgb(192,9,199);
-    background: linear-gradient(90deg, rgba(192,9,199,0) 0%, rgba(192,9,199,0.2) 18%, rgba(23,126,152,0.5) 42%, rgba(154,35,189,0.2) 78%, rgba(154,35,189,0) 100%);
-}
-
-.whitepaper .content h3
-{
-    font-size: 40px;
-    font-weight: bold;
-    word-wrap: break-word;
-    margin: auto;
-    margin-bottom: 2%;
-    text-align: center;
-    font-family: Black Ops One;
-    background: -webkit-linear-gradient( 150deg,#FA742B 0%, #FFE985 90%, #FA742B 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    color: #978170;
-}
-.whitepaper .content p
-{
-    font-size: 20px;
-    font-family: Play;
-    color: white;
-    padding-bottom: 10px;
-    padding-top:1%;
-    word-wrap: break-word;
-}
-.whitepaper .content p1
-{
-    font-size: 20px;
-    font-family: Play;
-    color: gold;
-    padding-bottom: 10px;
-}
-
-.wpBtn{
-    font-size: 30px;
-    padding-top: 9px;
-    padding-bottom: 9px;
-    padding-left: 55px;
-    padding-right: 55px;
-    font-family: Play;
-    font-weight: bold;
-    background-image: linear-gradient( 500deg, rgba(255, 60, 172, 0.6) 0%, rgba(120, 75, 160, 0.6) 62%, rgba(43, 134, 197, 0.6) 100%);
-    color: white;
-    border-radius: 5px;
-    z-index: 0;
-    box-shadow: 0 0 5px white;
-    margin-left: 29%;
-    transition: 0.5s;
-}
-
-.wpBtn:hover{
-    background-image: linear-gradient( 500deg, rgba(255, 60, 172, 0.3) 0%, rgba(120, 75, 160, 0.3) 62%, rgba(43, 134, 197, 0.3) 100%);
-    transition: 0.5s;
-    color: gold;
-    box-shadow: 0 0 20px white;
-}
-
-.roadmap{
-    background-image:linear-gradient(to bottom,rgba(0,0,0,0.3),rgba(0,0,0,0.5)),url(../images/black_block.png);
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    height: 800px;
-    flex-direction:column;
-    background-color: black;
-}
-
-.roadmap .mapbox {
-    width: 800px;
-    height: 300px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content:center;
-    align-items:flex-start;
-}
-
-.roadmap .mapbox .heading {
-    font-size: 30px;
-    font-family: Black Ops One;
-    color: white;
-}
-
-.roadmap .mapbox img {
-    width: 900px;
-    height: 650px;
-    margin-left: 40px;
-    margin-top: 20px;
-}
-
-
-/* contact */
-.roadmap .contactbox {
-    width: 400px;
-    height: 600px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content:center;
-    align-items:flex-start;
-}
-.roadmap .contactbox .heading {
-    font-size: 30px;
-    font-family: Black Ops One;
-    color: white;
-}
-
-.roadmap .contactbox form .inputbox{
-    align-items: center;
-}
-
-.roadmap .contactbox form .inputbox input,textarea{
-    padding: 10px;
-    margin: 10px;
-    font-size: 20px;
-    color: black;
-    text-transform: none;
-    border-radius: 12px;
-    width: 100%;
-    resize: none;
-    font-family: 'Play';
-}
-.roadmap .contactbox form .inputbox .btn3{
-    font-size: 25px;
-    padding: 10px;
-    width: 100%;
-    border-radius: 12px;
-    color: black;
-    box-shadow: 0 0 10px white;
+section {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: white;
 }
 
-.roadmap .contactbox form .inputbox .btn3:hover{
-    background-image: linear-gradient( 500deg, rgba(255, 60, 172, 0.6) 0%, rgba(120, 75, 160, 0.6) 62%, rgba(43, 134, 197, 0.6) 100%);
-    color: gold;
-    box-shadow: inset 400px 0 0 0 linear-gradient( 500deg, rgba(255, 60, 172, 0.6) 0%, rgba(120, 75, 160, 0.6) 62%, rgba(43, 134, 197, 0.6) 100%);
-    transition: 0.5s all;
-    font-size: 26px;
+#section1 {
+    height: 400px;
+    font-size: 21px;
+    color:  rgb(255, 255, 255) ;
+    text-shadow: 0 0 10px #7f0000;
+    padding-top: 150px;
+    background-repeat: no-repeat;
+    background-image: url('../images/1.jpg');
+    background-size: cover;
+    background-position: center;
 }
 
-/* Footer */
-.footer {
-    background-color: black;
-    text-align: center;
+#section2 {
+    height: 250px;
+    background-image: url('../images/2.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;}
+
+body #section2 h2 {
+    width: 200px;
+    height: 50px;
+    background-color: #ccc;
+    border-radius: 5px;
+    margin-top: 10px;
 }
 
-.footer .creadit{
-    color: white;
+#section3 {
+    height: 500px;
+    background-image: url('../images/3.png');
+    background-position: center;
+    background-size: 500px;
+    background-attachment: fixed;
+    opacity: 0.2;
 }
 
+.sub-section {
+    opacity: 0;
+    transition: opacity 2s ease-in-out;
+}
 
-/* ---- RWD ---- */
+.fade-in-section {
+    animation: fadeIn 2s ease-in-out forwards;
+}
 
-@media (max-width: 767px){
-    /* header */
-    #menu-bar {
-        display: initial;
-        position: absolute;
-        right: 10px;
-        top: 20px;
+@keyframes fadeIn {
+    to {
+        opacity: 1;
     }
+}
 
-    header .navbar {
-        position: absolute;
-        flex-direction:column;
-        top: 80px; left: 0; right: 0;
-        background-color: black;
-        border-top: 3px solid white;
-        /* hiding */
-        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
-    }
+.sub-section {
+    opacity: 0;
+    transition: opacity 2s ease-in-out;
+}
 
-    header .navbar a{
-        /* 疊 */
-        display: block;
-        font-size: 20px;
-        font-weight: normal;
-        color: white;
-        margin: 10px; padding: 8px;
-        border-left: 1px solid white;
-    }
-
-    header .navbar.active {
-        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-        padding: 10px;
-        transition: 0.2s all;
-    }
-
-    .btn{
-        font-size: 20px;
-    }
-
-    .introduce
-    {
-    height: 100%;
-    background-attachment: scroll;
-    }
-
-    /* about game */
-    .category{
-        min-height: 0px;
-    }
-    .category .content{
-        width: 100%;
-        margin-top: 0%;
-        margin-left: 0%;
-        padding: 30px;
-    }
-    .category .content h3{
-        font-size: 25px;
-    }
-
-    .category .content p{
-        font-size: 13px;
-    }
-    .category .content p1{
-        font-size: 13px;
-    }
-
-    /* whitepaper */
-    .whitepaper{
-        min-height: 0px;
-    }
-
-    .whitepaper .content
-    {
-        width: 100%;
-        margin-top: 0%;
-        margin-left: 0%;
-        padding: 20px;
-    }
-
-    .whitepaper .content h3{
-        font-size: 25px;
-        text-align: center;
-    }
-    .whitepaper .content p{
-        font-size: 13px;
-    }
-    .whitepaper .content p1{
-        font-size: 13px;
-    }
-    .wpBtn{
-        font-size: 20px;
-        margin-left: 1%;
-    }
-
-    .roadmap{
-        flex-wrap:nowrap;
-        height: 1200px;
-    }
-
-    .roadmap .mapbox{
-        width: 100%;
-    }
-
-    .roadmap .mapbox img {
-        width: 100%;
-        height: 500px;
-        margin-right: 10%;
-    }
-
-    .roadmap .contactbox {
-        margin-top: 70%;
-        width: 100%;
-    }
-
-    
+footer {
+    background-image: url(../images/footer.png);
+    background-size: 400px;
+    background-position: center;
+    background-color: #000;
+    opacity: 90%;
+    height: 110px;
+    position: fixed; /* 固定位置 */
+    bottom: 0; /* 距離頁面底部 0px */
+    left: 0; /* 距離頁面左側 0px */
+    width: 100%; /* footer 寬度為 100% */
+    z-index: 1000; /* 確保 footer 在最上層 */
 }
